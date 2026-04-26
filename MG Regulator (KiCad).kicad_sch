@@ -1,13 +1,15 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "01abfb08-49ec-4d70-a3a5-fe67c37c26f0")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector:Conn_01x02_Pin"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -81,16 +83,26 @@
 				)
 			)
 			(symbol "Conn_01x02_Pin_1_1"
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
-					)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(polyline
@@ -105,26 +117,16 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(pin passive line
@@ -164,9 +166,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -239,7 +244,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -251,7 +256,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -300,9 +305,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -421,10 +429,15 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Diode:1N4002"
-			(pin_numbers hide)
-			(pin_names hide)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -522,10 +535,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -534,10 +547,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -583,6 +596,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "New_Library:Arduino_Pro_Micro_Socket"
 			(pin_names
@@ -666,18 +680,6 @@
 				)
 				(polyline
 					(pts
-						(xy 6.35 -11.43) (xy 5.08 -11.43)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -11.43 -16.51) (xy -5.08 -16.51) (xy -5.08 -15.24)
 					)
 					(stroke
@@ -702,6 +704,18 @@
 				)
 				(polyline
 					(pts
+						(xy -2.54 13.97) (xy -2.54 19.05) (xy -7.62 19.05)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy -2.54 3.81) (xy -2.54 -1.27) (xy -7.62 -1.27)
 					)
 					(stroke
@@ -714,7 +728,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 13.97) (xy -2.54 19.05) (xy -7.62 19.05)
+						(xy 6.35 -11.43) (xy 5.08 -11.43)
 					)
 					(stroke
 						(width 0)
@@ -736,16 +750,16 @@
 						(type none)
 					)
 				)
-				(text "Analog"
-					(at -2.794 9.144 900)
+				(text "Power"
+					(at -5.08 -11.43 900)
 					(effects
 						(font
 							(size 1.524 1.524)
 						)
 					)
 				)
-				(text "Power"
-					(at -5.08 -11.43 900)
+				(text "Analog"
+					(at -2.794 9.144 900)
 					(effects
 						(font
 							(size 1.524 1.524)
@@ -798,42 +812,6 @@
 				)
 			)
 			(symbol "Arduino_Pro_Micro_Socket_1_1"
-				(pin bidirectional line
-					(at -25.4 -1.27 0)
-					(length 7.62)
-					(name "A0/D18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -25.4 1.27 0)
-					(length 7.62)
-					(name "A1/D19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -25.4 19.05 0)
 					(length 7.62)
@@ -852,17 +830,35 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at -25.4 3.81 0)
+				(pin input line
+					(at -25.4 16.51 0)
 					(length 7.62)
-					(name "A2/D20"
+					(name "A9/D9"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "A2"
+					(number "A9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -25.4 13.97 0)
+					(length 7.62)
+					(name "A8/D8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -871,16 +867,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at -25.4 6.35 0)
+					(at -25.4 11.43 0)
 					(length 7.62)
-					(name "A3/D21"
+					(name "A7/D6"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "A3"
+					(number "A7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -907,52 +903,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at -25.4 11.43 0)
+					(at -25.4 6.35 0)
 					(length 7.62)
-					(name "A7/D6"
+					(name "A3/D21"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "A7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -25.4 13.97 0)
-					(length 7.62)
-					(name "A8/D8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -25.4 16.51 0)
-					(length 7.62)
-					(name "A9/D9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A9"
+					(number "A3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -961,16 +921,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 24.13 -12.7 180)
+					(at -25.4 3.81 0)
 					(length 7.62)
-					(name "D0/RX"
+					(name "A2/D20"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D0"
+					(number "A2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -979,16 +939,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 24.13 -10.16 180)
+					(at -25.4 1.27 0)
 					(length 7.62)
-					(name "D1/TX"
+					(name "A1/D19"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D1"
+					(number "A1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -997,16 +957,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 24.13 7.62 180)
+					(at -25.4 -1.27 0)
 					(length 7.62)
-					(name "D14/MISO"
+					(name "A0/D18"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D14"
+					(number "A0"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1014,17 +974,17 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at 24.13 5.08 180)
+				(pin power_in line
+					(at -25.4 -6.35 0)
 					(length 7.62)
-					(name "D15/SCLK"
+					(name "RAW"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D15"
+					(number "RAW"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1032,17 +992,71 @@
 						)
 					)
 				)
-				(pin bidirectional line
-					(at 24.13 2.54 180)
+				(pin power_in line
+					(at -25.4 -8.89 0)
 					(length 7.62)
-					(name "D16/MOSI"
+					(name "Vcc"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "D16"
+					(number "Vcc1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -13.97 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "GND1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -16.51 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "GND2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -25.4 -19.05 0)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "GND3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1122,17 +1136,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -25.4 -13.97 0)
+				(pin bidirectional line
+					(at 24.13 7.62 180)
 					(length 7.62)
-					(name "GND"
+					(name "D14/MISO"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "GND1"
+					(number "D14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1140,17 +1154,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -25.4 -16.51 0)
+				(pin bidirectional line
+					(at 24.13 5.08 180)
 					(length 7.62)
-					(name "GND"
+					(name "D15/SCLK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "GND2"
+					(number "D15"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1158,17 +1172,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -25.4 -19.05 0)
+				(pin bidirectional line
+					(at 24.13 2.54 180)
 					(length 7.62)
-					(name "GND"
+					(name "D16/MOSI"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "GND3"
+					(number "D16"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1176,17 +1190,35 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -25.4 -6.35 0)
+				(pin bidirectional line
+					(at 24.13 -10.16 180)
 					(length 7.62)
-					(name "RAW"
+					(name "D1/TX"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "RAW"
+					(number "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 24.13 -12.7 180)
+					(length 7.62)
+					(name "D0/RX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "D0"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1212,25 +1244,8 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -25.4 -8.89 0)
-					(length 7.62)
-					(name "Vcc"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "Vcc1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "New_Library:Terminal"
 			(exclude_from_sim no)
@@ -1312,6 +1327,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Regulator_Linear:AP7370-50FDC"
 			(exclude_from_sim no)
@@ -1393,17 +1409,17 @@
 				)
 			)
 			(symbol "AP7370-50FDC_1_1"
-				(pin power_out line
-					(at 7.62 0 180)
+				(pin power_in line
+					(at -7.62 0 0)
 					(length 2.54)
-					(name "VO"
+					(name "VI"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1413,7 +1429,8 @@
 				)
 				(pin no_connect line
 					(at -5.08 -2.54 0)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -1422,6 +1439,25 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -5.08 -5.08 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1447,63 +1483,10 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at 5.08 -2.54 180)
-					(length 2.54) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -5.08 -5.08 0)
-					(length 2.54) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "VI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin passive line
 					(at 0 -7.62 90)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -1519,7 +1502,45 @@
 						)
 					)
 				)
+				(pin no_connect line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "VO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Sensor_Current:ACS723xLCTR-05AB"
 			(exclude_from_sim no)
@@ -1624,7 +1645,8 @@
 				)
 				(pin passive line
 					(at -10.16 5.08 0)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "IP+"
 						(effects
 							(font
@@ -1660,7 +1682,8 @@
 				)
 				(pin passive line
 					(at -10.16 -2.54 0)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name "IP-"
 						(effects
 							(font
@@ -1669,60 +1692,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "BW_SEL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 10.16 5.08 180)
-					(length 2.54)
-					(name "VIOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1748,10 +1717,67 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "VIOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "BW_SEL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Transistor_FET:IRLML2060"
-			(pin_names hide)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1824,18 +1850,6 @@
 			(symbol "IRLML2060_0_1"
 				(polyline
 					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
 					)
 					(stroke
@@ -1848,7 +1862,19 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1872,34 +1898,10 @@
 				)
 				(polyline
 					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
 					)
 					(stroke
 						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
 						(type default)
 					)
 					(fill
@@ -1930,6 +1932,63 @@
 						(type outline)
 					)
 				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
@@ -1954,39 +2013,6 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 			)
 			(symbol "IRLML2060_1_1"
 				(pin input line
@@ -2000,24 +2026,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2043,13 +2051,36 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2140,13 +2171,60 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
+	(text "Power for thermistor (turn on before reading, then off)"
+		(exclude_from_sim no)
+		(at 140.97 140.716 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "337a9555-6b3c-41fd-88c1-b5e491bbde7e")
+	)
+	(text "Battery voltage sense\n"
+		(exclude_from_sim no)
+		(at 100.076 74.676 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "def97062-ae15-4a00-afbd-cbfc3353d84e")
+	)
+	(text "Field Coil Control"
+		(exclude_from_sim no)
+		(at 205.486 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ee829921-eebb-441d-9135-fff3e07b8ecc")
+	)
+	(text "Field coil current sense"
+		(exclude_from_sim no)
+		(at 125.984 147.066 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f2d33f3f-c329-4140-bd73-0b443b317f08")
+	)
 	(junction
-		(at 64.77 135.89)
+		(at 63.5 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "04574c79-e674-4918-a2b2-d03daff6d418")
+	)
+	(junction
+		(at 191.77 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "130a6c10-6a2f-4f7c-9dc7-068e4ab67f52")
 	)
 	(junction
 		(at 88.9 97.79)
@@ -2197,6 +2275,12 @@
 		(uuid "b53c5cde-cf5c-4344-a2bb-03b4b64c5e24")
 	)
 	(junction
+		(at 81.28 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b9c9b325-c1d3-48be-8514-14203cbbce4d")
+	)
+	(junction
 		(at 247.65 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2220,6 +2304,12 @@
 		(color 0 0 0 0)
 		(uuid "f087b584-fe21-43e9-8d63-bb1213f4a2bc")
 	)
+	(junction
+		(at 191.77 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff38239f-175b-4ef7-ab71-b22d2a080bb0")
+	)
 	(wire
 		(pts
 			(xy 52.07 90.17) (xy 52.07 58.42)
@@ -2242,7 +2332,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 135.89) (xy 64.77 135.89)
+			(xy 105.41 157.48) (xy 63.5 157.48)
 		)
 		(stroke
 			(width 0)
@@ -2282,7 +2372,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 120.65) (xy 64.77 125.73)
+			(xy 63.5 142.24) (xy 63.5 147.32)
 		)
 		(stroke
 			(width 0)
@@ -2332,16 +2422,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 105.41) (xy 66.04 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "215642b1-dd8c-493f-b123-f5fc68da97ce")
-	)
-	(wire
-		(pts
 			(xy 88.9 85.09) (xy 88.9 97.79)
 		)
 		(stroke
@@ -2362,7 +2442,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 120.65) (xy 175.26 120.65)
+			(xy 63.5 142.24) (xy 175.26 142.24)
 		)
 		(stroke
 			(width 0)
@@ -2382,13 +2462,33 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 66.04) (xy 175.26 120.65)
+			(xy 66.04 123.19) (xy 66.04 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b58b5fe-eabc-404e-a0f7-58a141e3ca13")
+	)
+	(wire
+		(pts
+			(xy 175.26 66.04) (xy 175.26 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2b58bf74-6e12-424d-94c1-1a335b4e938c")
+	)
+	(wire
+		(pts
+			(xy 73.66 118.11) (xy 85.09 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d6f42d2-ce9f-4e52-805e-1bdc82cef4b9")
 	)
 	(wire
 		(pts
@@ -2399,6 +2499,16 @@
 			(type default)
 		)
 		(uuid "2f4b9cbf-6e5b-4b46-b14e-37048c431455")
+	)
+	(wire
+		(pts
+			(xy 191.77 78.74) (xy 191.77 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35155fb2-36e3-4fb8-b768-84363f8f0a63")
 	)
 	(wire
 		(pts
@@ -2522,7 +2632,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 135.89) (xy 64.77 142.24)
+			(xy 63.5 157.48) (xy 63.5 163.83)
 		)
 		(stroke
 			(width 0)
@@ -2532,7 +2642,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 97.79) (xy 88.9 111.76)
+			(xy 88.9 97.79) (xy 88.9 105.41)
 		)
 		(stroke
 			(width 0)
@@ -2592,6 +2702,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 105.41) (xy 66.04 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8891978c-ddcc-4d1e-978e-88b9e409e0bf")
+	)
+	(wire
+		(pts
 			(xy 115.57 95.25) (xy 114.3 95.25)
 		)
 		(stroke
@@ -2599,16 +2719,6 @@
 			(type default)
 		)
 		(uuid "88f9c81a-6b96-450f-b78b-eaed678f0d26")
-	)
-	(wire
-		(pts
-			(xy 64.77 144.78) (xy 64.77 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88fc6ae1-388a-49d0-a36b-519526a2b853")
 	)
 	(wire
 		(pts
@@ -2652,6 +2762,36 @@
 	)
 	(wire
 		(pts
+			(xy 191.77 127) (xy 191.77 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5afbbcb-bd34-4634-9ea9-4df25754062d")
+	)
+	(wire
+		(pts
+			(xy 81.28 105.41) (xy 88.9 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6283fa1-b5d9-4c96-83e6-673ce6531a57")
+	)
+	(wire
+		(pts
+			(xy 63.5 166.37) (xy 63.5 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6a42277-464d-4795-9dd1-93602df35fcb")
+	)
+	(wire
+		(pts
 			(xy 165.1 63.5) (xy 181.61 63.5)
 		)
 		(stroke
@@ -2662,7 +2802,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 80.01) (xy 106.68 80.01)
+			(xy 115.57 80.01) (xy 105.41 80.01)
 		)
 		(stroke
 			(width 0)
@@ -2682,7 +2822,17 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 133.35) (xy 64.77 135.89)
+			(xy 191.77 118.11) (xy 191.77 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1beeec9-e0e2-48cc-9604-346ed71179cd")
+	)
+	(wire
+		(pts
+			(xy 63.5 154.94) (xy 63.5 157.48)
 		)
 		(stroke
 			(width 0)
@@ -2749,6 +2899,16 @@
 			(type default)
 		)
 		(uuid "d1f5048a-e6ee-48cf-b4ad-a5f53db1aa47")
+	)
+	(wire
+		(pts
+			(xy 92.71 118.11) (xy 191.77 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d30c4d7a-f8e6-4a77-aa6c-e96f075dd2fd")
 	)
 	(wire
 		(pts
@@ -2822,7 +2982,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 80.01) (xy 106.68 135.89)
+			(xy 105.41 80.01) (xy 105.41 157.48)
 		)
 		(stroke
 			(width 0)
@@ -2890,49 +3050,38 @@
 		)
 		(uuid "f7d33a13-918a-4e4e-9937-5666201ddab7")
 	)
-	(text "Power for thermistor (turn on before reading, then off)"
-		(exclude_from_sim no)
-		(at 143.002 119.634 0)
+	(label "FLD_I_SENSE"
+		(at 170.18 148.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(uuid "337a9555-6b3c-41fd-88c1-b5e491bbde7e")
+		(uuid "226bc1ca-f92f-49e6-867c-aeb897dfbd06")
 	)
-	(text "Battery voltage sense\n"
-		(exclude_from_sim no)
-		(at 100.076 74.676 0)
+	(label "B+"
+		(at 191.77 59.69 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(uuid "def97062-ae15-4a00-afbd-cbfc3353d84e")
+		(uuid "39d64f56-66c3-4fd6-aa99-9cfad667984c")
 	)
-	(text "Field Coil Control"
-		(exclude_from_sim no)
-		(at 192.786 90.17 0)
+	(label "SWGND"
+		(at 63.5 173.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(uuid "ee829921-eebb-441d-9135-fff3e07b8ecc")
-	)
-	(text "Field coil current sense"
-		(exclude_from_sim no)
-		(at 123.952 147.066 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f2d33f3f-c329-4140-bd73-0b443b317f08")
+		(uuid "aa2263a8-4c9b-4b82-962a-eb713dbd14d2")
 	)
 	(label "VCC"
 		(at 96.52 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2943,7 +3092,6 @@
 	)
 	(label "VCC"
 		(at 237.49 100.33 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2951,6 +3099,36 @@
 			(justify left bottom)
 		)
 		(uuid "c277157a-24d5-4b85-8f78-8c1e117e4b1a")
+	)
+	(label "FIELD_COIL"
+		(at 248.92 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d2f44d5f-181e-452c-86f4-0058e0b97f36")
+	)
+	(label "SWGND"
+		(at 66.04 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d73b5bed-ac6e-43f2-bb81-09337ab3549c")
+	)
+	(label "FIELD_LOW1"
+		(at 248.92 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ffe2d391-cecb-476d-9399-6f2ccf8fff40")
 	)
 	(symbol
 		(lib_id "New_Library:Terminal")
@@ -3220,6 +3398,76 @@
 			(project "MG Regulator (KiCad)"
 				(path "/01abfb08-49ec-4d70-a3a5-fe67c37c26f0"
 					(reference "T1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 191.77 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "133c6e68-efb3-4bf1-a0e4-c4621dadbfca")
+		(property "Reference" "R5"
+			(at 194.31 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 194.31 124.4599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 189.992 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 191.77 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "59abd004-25d8-4985-b15a-4e60e2aa1e18")
+		)
+		(pin "1"
+			(uuid "e6b7a25e-745f-4697-ac9c-60f6eb4f0c74")
+		)
+		(instances
+			(project "MG Regulator (KiCad)"
+				(path "/01abfb08-49ec-4d70-a3a5-fe67c37c26f0"
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -3608,6 +3856,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:IRLML2060")
+		(at 68.58 118.11 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "49ba1bd3-2b0f-4356-92f3-47f7ee61555e")
+		(property "Reference" "Q2"
+			(at 62.23 119.3801 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AM2336N-CT"
+			(at 62.23 116.8401 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
+			(at 63.5 120.015 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/irlml2060pbf.pdf?fileId=5546d462533600a401535664b7fb25ee"
+			(at 63.5 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.2A Id, 60V Vds, 480mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
+			(at 68.58 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "74456888-df94-44f1-b24d-0dd26572951e")
+		)
+		(pin "2"
+			(uuid "f9ed6695-ed95-4882-88ac-ed34d64e6ff8")
+		)
+		(pin "3"
+			(uuid "ebf73928-c24b-431b-be42-ab4f824ee5e2")
+		)
+		(instances
+			(project "MG Regulator (KiCad)"
+				(path "/01abfb08-49ec-4d70-a3a5-fe67c37c26f0"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 81.28 99.06 0)
 		(unit 1)
@@ -3678,7 +4002,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 59.69 142.24 0)
+		(at 58.42 163.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3686,7 +4010,7 @@
 		(dnp no)
 		(uuid "66d4bd0f-aec5-473c-83ac-f3b1d9c0d45a")
 		(property "Reference" "J1"
-			(at 60.325 137.16 0)
+			(at 59.055 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3694,7 +4018,7 @@
 			)
 		)
 		(property "Value" "10K thermistor connector"
-			(at 77.216 143.256 0)
+			(at 75.946 164.846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3702,7 +4026,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
-			(at 59.69 142.24 0)
+			(at 58.42 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3711,7 +4035,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 59.69 142.24 0)
+			(at 58.42 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3720,7 +4044,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 59.69 142.24 0)
+			(at 58.42 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3950,6 +4274,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 191.77 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7f495c75-5f32-40a5-92a8-40ac1a94747a")
+		(property "Reference" "#PWR01"
+			(at 191.77 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 191.77 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 191.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 191.77 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5bd2f7a2-3c45-43bd-a755-333df2a170fb")
+		)
+		(instances
+			(project "MG Regulator (KiCad)"
+				(path "/01abfb08-49ec-4d70-a3a5-fe67c37c26f0"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:IRLML2060")
 		(at 246.38 91.44 0)
 		(unit 1)
@@ -4160,7 +4550,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 66.04 107.95 0)
+		(at 66.04 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4169,7 +4559,7 @@
 		(fields_autoplaced yes)
 		(uuid "aafa9fa5-28e8-4605-ad60-c832b3e82961")
 		(property "Reference" "#PWR06"
-			(at 66.04 114.3 0)
+			(at 66.04 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4178,7 +4568,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 66.04 113.03 0)
+			(at 66.04 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4186,7 +4576,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 107.95 0)
+			(at 66.04 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4195,7 +4585,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 107.95 0)
+			(at 66.04 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4204,7 +4594,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 66.04 107.95 0)
+			(at 66.04 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4225,167 +4615,33 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 88.9 111.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c515902e-27d3-421e-97c0-45433e0b4a12")
-		(property "Reference" "#PWR01"
-			(at 88.9 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 88.9 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 88.9 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 88.9 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2d59e955-7341-4fd4-b385-e7704504ef1f")
-		)
-		(instances
-			(project "MG Regulator (KiCad)"
-				(path "/01abfb08-49ec-4d70-a3a5-fe67c37c26f0"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 64.77 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c74970de-0947-4d5c-91e9-0bce171cd218")
-		(property "Reference" "#PWR05"
-			(at 64.77 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 64.77 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 64.77 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 64.77 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6558b06d-12c0-4392-95b8-e18a5171ae41")
-		)
-		(instances
-			(project "MG Regulator (KiCad)"
-				(path "/01abfb08-49ec-4d70-a3a5-fe67c37c26f0"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 64.77 129.54 0)
+		(at 88.9 118.11 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d4bc45f5-63e5-488c-884b-acbeb763d6c6")
-		(property "Reference" "R4"
-			(at 67.31 128.2699 0)
+		(uuid "b559faae-60b1-41f0-8890-1861862c69bc")
+		(property "Reference" "R6"
+			(at 88.9 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "10K"
-			(at 67.31 130.8099 0)
+		(property "Value" "R"
+			(at 88.9 114.3 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 62.992 129.54 90)
+			(at 88.9 119.888 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4394,7 +4650,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 64.77 129.54 0)
+			(at 88.9 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4403,7 +4659,77 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 64.77 129.54 0)
+			(at 88.9 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "83de9283-9b20-425c-8b3c-4fab4ebb68a2")
+		)
+		(pin "1"
+			(uuid "4a6b58d5-5f3f-4e18-9943-b1f9c42cd02e")
+		)
+		(instances
+			(project "MG Regulator (KiCad)"
+				(path "/01abfb08-49ec-4d70-a3a5-fe67c37c26f0"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 63.5 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d4bc45f5-63e5-488c-884b-acbeb763d6c6")
+		(property "Reference" "R4"
+			(at 66.04 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 66.04 152.3999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 61.722 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 63.5 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 63.5 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4587,4 +4913,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
