@@ -3697,7 +3697,7 @@
 		)
 		(uuid "4ea3f2b3-0991-41ae-a105-597889e66d6a")
 	)
-	(label "SWGND"
+	(label "VCC"
 		(at 63.5 173.99 0)
 		(effects
 			(font
@@ -4366,7 +4366,7 @@
 				)
 			)
 		)
-		(property "Value" "Arduino_Pro_Mini_Socket"
+		(property "Value" "Arduino_Pro_Micro_Socket"
 			(at 140.335 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4591,7 +4591,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2N7002"
+		(property "Value" "DMG3414U-7"
 			(at 195.58 137.1599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4863,7 +4863,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "AM2336N-CT"
+		(property "Value" "DMG3414U-7"
 			(at 62.23 116.8401 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5436,7 +5436,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "AM2336N-CT"
+		(property "Value" "DMG3414U-7"
 			(at 252.73 92.7099 0)
 			(show_name no)
 			(do_not_autoplace no)
